@@ -5,12 +5,15 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/employees")
-public class EmployeeController {
-
+public class EmployeeController {// Added new feature branch change
     private final EmployeeRepository repository;
 
     public EmployeeController(EmployeeRepository repository) {
         this.repository = repository;
+    }
+    @GetMapping("/test")
+    public String testApi() {
+        return "Feature branch working";
     }
 
     // CREATE
